@@ -92,8 +92,8 @@ class CreatePassengersTable extends Migration
             $table->unsignedBigInteger('driver_id');
             $table->timestamps();
 
-            $table->foreign('ride_id')->references('id')->on('rides'); 
-            $table->foreign('passenger_id')->references('id')->on('passengers');
+            //$table->foreign('ride_id')->references('id')->on('rides'); 
+            ////$table->foreign('passenger_id')->references('id')->on('passengers');
             $table->foreign('driver_id')->references('id')->on('drivers');
             $table->string('message'); 
             $table->text('message_notifyby');
@@ -109,7 +109,7 @@ class CreatePassengersTable extends Migration
      */
     public function down()
     {
-        // Schema::dropIfExists('passengers');
+        //Schema::dropIfExists('passengers');
         //Schema::dropIfExists('drivers');        
         //Schema::dropIfExists('admins');
         //Schema::dropIfExists('rides');
